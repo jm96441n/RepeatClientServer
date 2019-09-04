@@ -39,7 +39,7 @@ docker_pull:
 	docker pull fsgeek/omscs6200
 
 docker_run:
-	docker run --name=$(CONTAINER_NAME) --rm -it -v/$(PWD):/RepeatClientServer fsgeek/omscs6200 /bin/bash
+	docker run --name=$(CONTAINER_NAME) --rm -it -w /RepeatClientServer -v/$(PWD):/RepeatClientServer fsgeek/omscs6200 /bin/bash
 
 docker_connect:
 	docker exec -it $(CONTAINER_NAME) /bin/bash
